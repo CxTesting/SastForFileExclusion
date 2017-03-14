@@ -1,9 +1,14 @@
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class Medium {
 
-    public static void doSomething() throws SQLException {
-        DriverManager.getConnection("10.11.12.13", "sa", "password");
+    private HttpServletRequest request = null;
+    private HttpServletResponse response = null;
+
+    public static void updateProfle(String SSNumber)
+    {
+        String newSSN = formatSSN(this, SSNumber);
+        System.out.println("Social Security Number valid: " + newSSN);
     }
 }
