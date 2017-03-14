@@ -3,11 +3,7 @@ import java.sql.SQLException;
 
 public class Medium {
 
-    void main(javax.servlet.http.HttpServletRequest req, java.sql.Statement stat)
-    {
-        String paramName = req.getParameter("rating");
-        String sSQL="";
-        sSQL = "update items set rating=rating+" + paramName;
-        stat.executeUpdate(sSQL);
+    public static void doSomething() throws SQLException {
+        DriverManager.getConnection("10.11.12.13", "sa", "password");
     }
 }
