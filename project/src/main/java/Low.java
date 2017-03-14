@@ -2,7 +2,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.servlet.jsp.JspWriter;
 
-public class Small
+public class Low
 {
      public static void doSomthing(String fName)  {
 	try {
