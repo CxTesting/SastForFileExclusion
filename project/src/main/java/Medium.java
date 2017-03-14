@@ -3,9 +3,11 @@ import java.sql.SQLException;
 
 public class Medium {
 
-    private static String dbms = "12:121:121:12";
-
-     public static void main(String dbName) throws SQLException {
-		DriverManager.getConnection("jdbc:" + dbms + ":" + dbName + ";create=true");
-     }
+    void main(javax.servlet.http.HttpServletRequest req, java.sql.Statement stat)
+    {
+        String paramName = req.getParameter("rating");
+        String sSQL="";
+        sSQL = "update items set rating=rating+" + paramName;
+        stat.executeUpdate(sSQL);
+    }
 }
